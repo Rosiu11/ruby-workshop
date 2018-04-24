@@ -1,0 +1,100 @@
+:root {
+  --height: 40px;
+  --button-radius: 5px;
+
+  --accent: #3f51b5;
+  --main: white;
+  --text: #333;
+}
+
+.button {
+  background-color: paleturquoise;
+  text-decoration: none;
+  padding: 0 20px;
+  border-radius: 5px;
+  color: black;
+  line-height: var(--height);
+  height: var(--height);
+  display:inline-block;
+  text-transform: uppercase;
+ transition: background-color .3s ease-in;
+}
+
+.button:hover {
+ background-color:palevioletred;
+}
+
+.button:active {
+  transform: translateY(2px);
+}
+.button:visited{
+  color:black;
+
+}
+
+.button--secondary {
+   line-height: calc(40px/2);
+  height: calc(40px/2);
+}
+
+.heading {
+  /* wpisz odpowiednie style */
+}
+
+.panel {
+  width: fit-content;
+   width: -moz-fit-content;
+  background-color: pink;
+  padding: 1em;
+  border-radius: 5px;
+
+}
+.panel + .panel {
+  margin-top:20px;
+}
+
+.panel__list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel__item + .panel__item {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.panel__title {
+  margin: 0px;
+
+}
+
+.panel__text {
+  margin: 0px;
+
+}
+
+.panel__actions {
+  /* wpisz odpowiednie style */
+}
+
+.panel__action + .panel__action {
+  /* wpisz odpowiednie style */
+}
+
+@media (min-width: 820x) {
+  .panel__list,
+  .panel__actions {
+     flex-direction: row;
+  }
+
+  .panel__item + .panel__item {
+    margin-left: 30px;
+    margin-top: 0 ;
+  }
+
+  .panel__action + .panel__action {
+   /* wpisz odpowiednie style */
+  }
+}
